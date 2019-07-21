@@ -9,7 +9,9 @@ class App extends Component {
       <div>
         <h1>Hello I'm a React App.</h1>
         <Person name="Adhikansh" age="18" />
-        <Person name="Vidushi" age="20" />
+        <Person name="Vidushi" age="20">
+          My Hobbies:Drawing
+        </Person>
       </div>
     );
     // return React.createElement(
