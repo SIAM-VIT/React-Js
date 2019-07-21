@@ -7,8 +7,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello I am Adhikansh</h1>
-        <Person />
+        <h1>Hello I'm a React App.</h1>
+        <Person name="Adhikansh" age="18" />
+        <Person name="Vidushi" age="20" />
       </div>
     );
     // return React.createElement(
