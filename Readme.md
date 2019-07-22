@@ -518,6 +518,8 @@ onToggle
 <li>Listenable Events: https://reactjs.org/docs/events.html</li>
 <li>Conditional Rendering: https://reactjs.org/docs/conditional-rendering.html</li>
 <li>Lists & Keys: https://reactjs.org/docs/lists-and-keys.html</li>
+<li>Error Boundaries: https://reactjs.org/docs/error-boundaries.html</li>
+<li>Chrome Devtool Debugging: https://developers.google.com/web/tools/chrome-devtools/javascript/</li>
 </ol>
 
 # More on CSS Modules
