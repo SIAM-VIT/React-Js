@@ -516,4 +516,6 @@ onToggle
 <li>Rendering Elements: https://reactjs.org/docs/rendering-elements.html</li>
 <li>Components & Props: https://reactjs.org/docs/components-and-props.html</li>
 <li>Listenable Events: https://reactjs.org/docs/events.html</li>
+<li>Conditional Rendering: https://reactjs.org/docs/conditional-rendering.html</li>
+<li>Lists & Keys: https://reactjs.org/docs/lists-and-keys.html</li>
 </ol>
