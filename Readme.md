@@ -506,3 +506,14 @@ Other Events
 Event names:
 
 onToggle
+
+
+
+# Useful Resources & Links
+<ol>
+<li>create-react-app: https://github.com/facebookincubator/create-react-app</li>
+<li>Introducing JSX: https://reactjs.org/docs/introducing-jsx.html</li>
+<li>Rendering Elements: https://reactjs.org/docs/rendering-elements.html</li>
+<li>Components & Props: https://reactjs.org/docs/components-and-props.html</li>
+<li>Listenable Events: https://reactjs.org/docs/events.html</li>
+</ol>
