@@ -1,5 +1,6 @@
 import React, { useState, Component } from "react";
 import "./App.css";
+import Radium, { StyleRoot } from "radium";
 import Person from "./Person/Person";
 
 class App extends Component {
@@ -111,7 +112,12 @@ class App extends Component {
       font: "inherit",
       border: "1px solid blue",
       padding: "8px",
-      margin: "10px auto"
+      margin: "10px auto",
+      curson: "pointer",
+      ":hover": {
+        backgroundColor: "ligthgreen",
+        color: "black"
+      }
     };
 
     let persons = null;
@@ -147,6 +153,10 @@ class App extends Component {
         </div>
       );
       style.backgroundColor = "red";
+      style[":hover"] = {
+        backgroundColor: "ligthgreen",
+        color: "black"
+      };
     }
 
     const classes = [];
@@ -158,20 +168,22 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <h1>Hello I'm a React App.</h1>
-        <p className={classes.join(" ")}>This is really working!</p>
-        <button
-          style={style}
-          // onClick={this.switchNameHandler.bind(this, "Hrihtik")}
-          onClick={this.togglePersonHandler}
-        >
-          {/* onClick{() => this.switchNameHandler("Hrithik")} */}
-          {/*This is can be used*/}
-          Switch Name
-        </button>
-        {persons}
-      </div>
+      <StyleRoot>
+        <div className="App">
+          <h1>Hello I'm a React App.</h1>
+          <p className={classes.join(" ")}>This is really working!</p>
+          <button
+            style={style}
+            // onClick={this.switchNameHandler.bind(this, "Hrihtik")}
+            onClick={this.togglePersonHandler}
+          >
+            {/* onClick{() => this.switchNameHandler("Hrithik")} */}
+            {/*This is can be used*/}
+            Switch Name
+          </button>
+          {persons}
+        </div>
+      </StyleRoot>
     );
     // return React.createElement(
     //   "div",
@@ -180,4 +192,4 @@ class App extends Component {
     // );
   }
 }
-export default App;
+export default Radium(App);
