@@ -1,46 +1,9 @@
 import React, { useState, Component } from "react";
 import "./App.css";
 import Radium, { StyleRoot } from "radium";
-import Person from "./Person/Person";
+import Person from "../components/Persons/Person/Person";
 
 class App extends Component {
-  // const [personsState, setPersonState] = useState({
-  //   persons: [
-  //     {
-  //       name: "Adhikansh",
-  //       age: 28
-  //     },
-  //     {
-  //       name: "Vidushi",
-  //       age: 20
-  //     },
-  //     {
-  //       name: "Harshita",
-  //       age: 20
-  //     }
-  //   ],
-  //   otherState: "some other value"
-  // });
-
-  // const switchNameHandler = () => {
-  //   setPersonState({
-  //     persons: [
-  //       {
-  //         name: "Adhi",
-  //         age: 28
-  //       },
-  //       {
-  //         name: "Akansha",
-  //         age: 20
-  //       },
-  //       {
-  //         name: "Harsho",
-  //         age: 20
-  //       }
-  //     ]
-  //   });
-  // };
-
   state = {
     persons: [
       {
@@ -93,7 +56,6 @@ class App extends Component {
   };
 
   deletePersonHandler = personIndex => {
-    // const persons = this.state.persons.slice();
     const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({ persons: persons });
@@ -136,20 +98,6 @@ class App extends Component {
               />
             );
           })}
-          {/* <Person
-            name={this.state.persons[0].name}
-            age={this.state.persons[0].age}
-          />
-          <Person
-            name={this.state.persons[1].name}
-            age={this.state.persons[1].age}
-            Click={this.switchNameHandler.bind(this, "Hero")}
-            changed={this.nameChangeHandler}
-          />
-          <Person
-            name={this.state.persons[2].name}
-            age={this.state.persons[2].age}
-          /> */}
         </div>
       );
       style.backgroundColor = "red";
@@ -161,10 +109,10 @@ class App extends Component {
 
     const classes = [];
     if (this.state.persons.length < 2) {
-      classes.push("red"); // classes = ['red']
+      classes.push("red");
     }
     if (this.state.persons.length <= 1) {
-      classes.push("bold"); //classes = ['red','bold']
+      classes.push("bold");
     }
 
     return (
@@ -172,24 +120,13 @@ class App extends Component {
         <div className="App">
           <h1>Hello I'm a React App.</h1>
           <p className={classes.join(" ")}>This is really working!</p>
-          <button
-            style={style}
-            // onClick={this.switchNameHandler.bind(this, "Hrihtik")}
-            onClick={this.togglePersonHandler}
-          >
-            {/* onClick{() => this.switchNameHandler("Hrithik")} */}
-            {/*This is can be used*/}
+          <button style={style} onClick={this.togglePersonHandler}>
             Switch Name
           </button>
           {persons}
         </div>
       </StyleRoot>
     );
-    // return React.createElement(
-    //   "div",
-    //   null,
-    //   React.createElement("h1", null, "Hi, I'm a React App!!!")
-    // );
   }
 }
 export default Radium(App);
