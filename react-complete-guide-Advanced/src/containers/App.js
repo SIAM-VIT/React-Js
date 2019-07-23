@@ -1,27 +1,31 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Radium, { StyleRoot } from "radium";
-import Person from "../components/Persons/Person/Person";
+
+import Persons from "../components/Persons/Persons";
 
 class App extends Component {
-  state = {
-    persons: [
-      {
-        name: "Adhikansh",
-        age: 28
-      },
-      {
-        name: "Vidushi",
-        age: 20
-      },
-      {
-        name: "Harshita",
-        age: 20
-      }
-    ],
-    otherState: "some other value",
-    showPerson: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      persons: [
+        {
+          name: "Adhikansh",
+          age: 28
+        },
+        {
+          name: "Vidushi",
+          age: 20
+        },
+        {
+          name: "Harshita",
+          age: 20
+        }
+      ],
+      otherState: "some other value",
+      showPerson: false
+    };
+  }
 
   switchNameHandler = newname => {
     this.setState({
@@ -87,17 +91,11 @@ class App extends Component {
     if (this.state.showPerson) {
       persons = (
         <div>
-          {this.state.persons.map((person, index) => {
-            return (
-              <Person
-                key={index}
-                name={person.name}
-                age={person.age}
-                ClickMe={this.deletePersonHandler.bind(this, index)}
-                changed={event => this.nameChangeHandler(event, index)}
-              />
-            );
-          })}
+          <Persons
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangeHandler}
+            persons={this.state.persons}
+          />
         </div>
       );
       style.backgroundColor = "red";
