@@ -1,11 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div>
-      <h1>Hi I'm Adhikansh mittal</h1>
-    </div>
-  );
+import Layout from "./components/Layout/Layout";
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Layout>
+          <p>Hey What's up?</p>
+        </Layout>
+      </div>
+    );
+  }
 }
 
 export default App;
